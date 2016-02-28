@@ -6,7 +6,7 @@ library(dplyr)
 
 
 
-
+#Data Upload
 smartcities <- read.csv("smartcities.csv")
 
 smartcities$State.UT <- as.character(smartcities$State.UT)
