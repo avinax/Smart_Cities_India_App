@@ -6,7 +6,7 @@ library(dplyr)
 
 
 
-#Data Upload
+
 smartcities <- read.csv("smartcities.csv")
 
 smartcities$State.UT <- as.character(smartcities$State.UT)
@@ -45,7 +45,7 @@ ui <- navbarPage(theme = "bootstrap.min4.css",
                           sidebarLayout(
                             sidebarPanel(
                               selectInput("states", selected = "All", label = tags$h2("State"),
-                                          choices = c("All", sort(smartcities$State.UT))), radioButtons("shortlisted", selected = "Round One (Total: 97)", tags$h2("List of Smart Cities"), c("Round One (Total: 97)" = "all", "Selected Cities (Total: 20)" = "selected", "On Fast Track Upgrade (Total: 23)" = "upgrade", "Round Two (Total: 54)" = "two")),
+                                          choices = c("All", sort(smartcities$State.UT))), radioButtons("shortlisted", selected = "Round One(97)", tags$h2("List of Smart Cities"), c("Round One(97)" = "all", "Selected Cities(20)" = "selected", "Shortlisted from Fast Track Upgrade(13)" = "fast", "Next Round(64)" = "two")),
                               htmlOutput("source", label = "Sources")
                             ),
                             mainPanel(
@@ -58,7 +58,7 @@ ui <- navbarPage(theme = "bootstrap.min4.css",
                           sidebarLayout(
                             sidebarPanel(
                               selectInput("states1", selected = "All", label = tags$h2("State"),
-                                          choices = c("All", sort(smartcities$State.UT))), radioButtons("shortlisted1", selected = "Round One (Total: 97)", tags$h2("List of Smart Cities"), c("Round One (Total: 97)" = "all", "Selected Cities (Total: 20)" = "selected", "On Fast Track Upgrade (Total: 23)" = "upgrade", "Round Two (Total: 54)" = "two")),
+                                          choices = c("All", sort(smartcities$State.UT))), radioButtons("shortlisted1", selected = "Round One(97)", tags$h2("List of Smart Cities"), c("Round One(97)" = "all", "Selected Cities(20)" = "selected", "Shortlisted from Fast Track Upgrade(13)" = "fast", "Next Round(64)" = "two")),
                               htmlOutput("source1", label = "Sources")
                             ),
                             div(mainPanel(
